@@ -1,0 +1,48 @@
+// @import "normalize.scss";
+
+//==== Mixin ====
+@mixin font-baloo {
+  font-family: "Baloo Bhaina 2", cursive;
+}
+@mixin font-roboto {
+  font-family: "Roboto", sans-serif;
+}
+// ==== / Mixin ====
+
+* {
+  margin: 0;
+  padding: 0;
+}
+.body {
+  width: 100%;
+  max-width: 1100px;
+  height: 600px;
+  background: #ffffff;
+  margin: 0 auto;
+}
+.section-menu {
+  margin: 24px auto 23px 32px;
+  background: #000000;
+  max-width: 132px;
+  height: 852px;
+  border-radius: 24px;
+  text-align: center;
+
+  &_logo {
+    padding-top: 15px;
+    padding-bottom: 32px;
+    @include font-baloo;
+    font-size: 64px;
+    line-height: 102px;
+    color: #ffffff;
+  }
+  &-icon {
+    margin-bottom: 224px;
+    &__box {
+      margin-bottom: 64px;
+    }
+    &__exit-end {
+      margin-bottom: 42px;
+    }
+  }
+}
