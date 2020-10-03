@@ -13,90 +13,223 @@
 </head>
 
 <body>
+
   <!--- MENU-->
-  <section class="section-menu section-icon ">
+  <nav class="section-menu">
     <h1 class="section-menu_logo">F.</h1>
     <div class="section-menu-icon">
-      <div class="section-menu-icon__box"><a href="#"><img src="menu-icon/1.svg"></div></a>
-      <div class="section-menu-icon__box"><a href="#"><img src="menu-icon/2.svg"></div></a>
-      <div class="section-menu-icon__box"><a href="#"><img src="menu-icon/3.svg"></div></a>
-      <div class="section-menu-icon__box"><a href="#"><img src="menu-icon/4.svg"></div></a>
-      <div class="section-menu-icon__box"><a href="#"><img src="menu-icon/5.svg"></div></a>
-
+      <div class="section-menu-icon__box"><a href="#"><img src="menu-icon/1.svg" alt=""></div></a>
+      <div class="section-menu-icon__box"><a href="#"><img src="menu-icon/2.svg" alt=""></div></a>
+      <div class="section-menu-icon__box"><a href="#"><img src="menu-icon/3.svg" alt=""></div></a>
+      <div class="section-menu-icon__box"><a href="#"><img src="menu-icon/4.svg" alt=""></div></a>
+      <div class="section-menu-icon__box"><a href="#"><img src="menu-icon/5.svg" alt=""></div></a>
+      <div class="section-menu-icon__box-exit"><a href="#"><img src="menu-icon/exit.svg" alt=""></div></a>
     </div>
-    <div class="section-icon__exit">
-      <img src="menu-icon/exit.svg" class="section-icon__exit-end">
-    </div>
-
-  </section>
+  </nav>
   <!--- / MENU-->
-
-  <!--- HEADER-->
-  <section class="section-header">
-    <div class="section-nav">
-      section-menu
+  <section class="main">
+    <div class="header">
+      <div class="header-wrapper">
+        <h1 class="header-wrapper__title">Hello Josh!</h1>
+        <p class="header-wrapper__subtitle">It’s good to see you again.</p>
+      </div>
+      <div class="header-wrapper__img">
+        <img src="img/Illustration.png" class="header-wrapper__img-boy" alt="">
+      </div>
+    </div>
+    <div class="course">
+      <div class="course-conteiner">
+        <div class="course_espanol">
+          <img src="img/icon/23.svg" alt="" class="course_espanol-icon">
+        </div>
+        <div class="course-text">
+          <h4 class="course-text__title">Spanish B2</h4>
+          <p class="course-text__subtitle">by Alejandro Velaazquez</p>
+        </div>
+        <div class="course-percent">
+          <img src="img/icon/24.svg" class="course-percent_img">
+          <p class="course-percent__icon">83%</p>
+        </div>
+        <div class="course-button">
+          <!-- <JS-button> -->
+          <button onclick="document.location='#'">Continue</button>
+        </div>
+      </div>
+      <div class="course-arrows">
+        <a href="#"><img src="img/icon/left.svg" class="course-arrows__left"></a>
+        <a href="#"><img src="img/icon/rigth.svg" class="course-arrows__right"></a>
+      </div>
+    </div>
+    <div class="all-course">
+      <nav class="all-course-nav">
+        <h1 class="all-course-nav__title">Courses</h1>
+        <ul class="all-course-nav__menu">
+          <li><a href="#" class="active">All Courses</a></li>
+          <li><a href="#" class="not-active">The Newest</a></li>
+          <li><a href="#" class="not-active">Top Rated</a></li>
+          <li><a href="#" class="not-active">Most Popular</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="course-section">
+      <div class="course-main">
+        <div class="course-main__icon">
+          <img src="img/icon/1.svg" alt="" class="course-main__icon-type">
+        </div>
+        <div class="course-main__text">
+          <h4 class="course-main__text-title">Learn Figma</h4>
+          <p class="course-main__text-subtitle">by Christopher Morgan</p>
+        </div>
+        <div class="course-main__time">
+          <img src="img/icon/time.svg" alt="" class="course-main__time__img">
+          <p>6h 30min</p>
+        </div>
+        <div class="course-main__fire">
+          <img src="img/icon/fire.svg" alt="" class="course-main__fire__img">4,9
+        </div>
+        <div class="course-main__button">
+          <button onclick="document.location='#'">View course</button>
+        </div>
+      </div>
+    </div>
+    <div class="course-section">
+      <div class="course-main">
+        <div class="course-main__icon">
+          <img src="img/icon/2.svg" alt="" class="course-main__icon-type2">
+        </div>
+        <div class="course-main__text">
+          <h4 class="course-main__text-title">Analog photography</h4>
+          <p class="course-main__text-subtitle">by Gordon Norman</p>
+        </div>
+        <div class="course-main__time">
+          <img src="img/icon/time.svg" alt="" class="course-main__time__img">
+          <p>3h 15min</p>
+        </div>
+        <div class="course-main__fire">
+          <img src="img/icon/fire.svg" alt="" class="course-main__fire__img">4,7
+        </div>
+        <div class="course-main__button">
+          <button onclick="document.location='#'">View course</button>
+        </div>
+      </div>
+    </div>
+    <div class="course-section">
+      <div class="course-main">
+        <div class="course-main__icon">
+          <img src="img/icon/3.svg" alt="" class="course-main__icon-type2">
+        </div>
+        <div class="course-main__text">
+          <h4 class="course-main__text-title">Master Instagram</h4>
+          <p class="course-main__text-subtitle">by Sophie Gill</p>
+        </div>
+        <div class="course-main__time">
+          <img src="img/icon/time.svg" alt="" class="course-main__time__img">
+          <p>7h 40min</p>
+        </div>
+        <div class="course-main__fire">
+          <img src="img/icon/fire.svg" alt="" class="course-main__fire__img">4,6
+        </div>
+        <div class="course-main__button">
+          <button onclick="document.location='#'">View course</button>
+        </div>
+      </div>
+    </div>
+    <div class="course-section">
+      <div class="course-main">
+        <div class="course-main__icon">
+          <img src="img/icon/4.svg" alt="" class="course-main__icon-type2">
+        </div>
+        <div class="course-main__text">
+          <h4 class="course-main__text-title">Basics of drawing</h4>
+          <p class="course-main__text-subtitle">by Jean Tate</p>
+        </div>
+        <div class="course-main__time">
+          <img src="img/icon/time.svg" alt="" class="course-main__time__img">
+          <p>11h 30min</p>
+        </div>
+        <div class="course-main__fire">
+          <img src="img/icon/fire.svg" alt="" class="course-main__fire__img">4,8
+        </div>
+        <div class="course-main__button">
+          <button onclick="document.location='#'">View course</button>
+        </div>
+      </div>
+    </div>
+    <div class="course-section">
+      <div class="course-main">
+        <div class="course-main__icon">
+          <img src="img/icon/5.svg" alt="" class="course-main__icon-type2">
+        </div>
+        <div class="course-main__text">
+          <h4 class="course-main__text-title">Photoshop - Essence</h4>
+          <p class="course-main__text-subtitle">by David Green</p>
+        </div>
+        <div class="course-main__time">
+          <img src="img/icon/time.svg" alt="" class="course-main__time__img">
+          <p>5h 35min</p>
+        </div>
+        <div class="course-main__fire">
+          <img src="img/icon/fire.svg" alt="" class="course-main__fire__img">4,7
+        </div>
+        <div class="course-main__button">
+          <button onclick="document.location='#'">View course</button>
+        </div>
+      </div>
     </div>
   </section>
-  <!--- / HEADER-->
+  <section class="aside">
+    <div class="navigation">
+      <div class="navigation-search">
+        <form class="search" action="/search/">
+          <input type="search" name="text">
+        </form>
+      </div>
+      <div class="navigation-icon">
+        <img src="img/Notification.svg" alt="" class="navigation-icon__im">
+        <img src="img/13.png" alt="" class="navigation-icon__img">
+        <img src="img/icon/38.svg" alt="" class="navigation-icon__img">
+      </div>
 
-  <!--- MY COURSE-->
-  <section class="section-course">
-    <div class="section-nav">
-      section-menu
+    </div>
+    <div class="stats">
+      <div class="stats-box">
+        <div class="stats-box__title">11</div>
+        <div class="stats-box__subtitle">Courses completed</div>
+      </div>
+      <div class="stats-box">
+        <div class="stats-box__title">4</div>
+        <div class="stats-box__subtitle">Courses in progress</div>
+      </div>
+
+    </div>
+    <div class="statis">
+      <div class="statis-title">Your statistics</div>
+      <div class="statis-block">
+        <div class="statis-block_text" onclick="document.location='#'">Learning Hours</div>
+        <div class="statis-block_textwo" onclick="document.location='#'">My Courses</div>
+        <div class="statis-block__select">
+          <select>
+            <option>Weekly</option>
+            <option>Weekly2</option>
+            <option>Weekly3</option>
+          </select>
+        </div>
+      </div>
+      <img src="img/icon/61.png" alt="" class="graph">
+
+    </div>
+    <div class="premium">
+      <div class="premium-box">
+        <h1 class="premium-title">Lern even more!</h1>
+        <p class="premium-subtitle">Unlock premium features
+          only for $9.99 per month.</p>
+        <div class="premium__button">
+          <button onclick="document.location='#'">Go Premium</button>
+        </div>
+      </div>
+      <img src="img/icon/48.svg" alt="" class="premium_img">
     </div>
   </section>
-  <!--- / MY COURSE-->
-
-  <!--- COURCES SECTION-->
-  <section class="section-cources">
-    <div class="section-nav">
-      section-menu
-    </div>
-  </section>
-  <!--- / COURCES SECTION-->
-
-
-  <!--- NAVIGATION-->
-  <section class="section-navigation">
-    <div class="section-nav">
-      section-menu
-    </div>
-  </section>
-  <!--- / NAVIGATION-->
-
-
-  <!--- STATS BOXES-->
-  <section class="section-boxes">
-    <div class="section-nav">
-      section-menu
-    </div>
-  </section>
-  <!--- / STATS BOXES-->
-
-
-
-  <!--- YOUR STATISTICS SECTION-->
-  <section class="section-statis">
-    <div class="section-nav">
-      section-menu
-    </div>
-  </section>
-  <!--- / YOUR STATISTICS SECTION-->
-
-
-  <!--- GO PREMIUM BANNER-->
-  <section class="section-banner">
-    <div class="section-nav">
-      section-menu
-    </div>
-  </section>
-  <!--- / GO PREMIUM BANNER-->
-
-
-
-
-
-
 </body>
 
 </html>

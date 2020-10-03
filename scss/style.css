@@ -1,38 +1,443 @@
 * {
   margin: 0;
   padding: 0;
+  border: 0;
 }
 
-.body {
-  width: 100%;
-  max-width: 1100px;
-  height: 600px;
-  background: #ffffff;
-  margin: 0 auto;
+body {
+  min-width: 1100px;
+  min-height: 600px;
+  height: 100vh;
+  width: auto;
+  padding-top: 2.5%;
+  padding-left: 2.5%;
+  box-sizing: border-box;
+  display: flex;
 }
 
 .section-menu {
-  margin: 24px auto 23px 32px;
   background: #000000;
-  max-width: 132px;
+  width: 10%;
   height: 852px;
   border-radius: 24px;
   text-align: center;
+  flex-direction: column;
+  box-shadow: 11px 13px 21px -7px rgba(0, 0, 0, 0.75);
 }
 .section-menu_logo {
-  padding-top: 15px;
-  padding-bottom: 32px;
+  padding-top: 24px;
+  padding-bottom: 60px;
   font-family: "Baloo Bhaina 2", cursive;
   font-size: 64px;
   line-height: 102px;
   color: #ffffff;
+  transition: 1s;
 }
-.section-menu-icon {
-  margin-bottom: 224px;
+.section-menu_logo:hover {
+  color: #f45b5b;
+  transform: scale(1);
 }
 .section-menu-icon__box {
-  margin-bottom: 64px;
+  margin-bottom: 55px;
+  transition: 1s;
 }
-.section-menu-icon__exit-end {
-  margin-bottom: 42px;
+.section-menu-icon__box:hover {
+  transform: scale(1.5);
+}
+.section-menu-icon__box-exit {
+  padding-top: 180px;
+  padding-bottom: 10px;
+  transition: 2s;
+}
+.section-menu-icon__box-exit:active {
+  transform: scale(1.5);
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  margin-left: 5%;
+  margin-right: 4.3%;
+  width: 56%;
+  height: 100%;
+}
+
+.header {
+  margin-top: 5%;
+  background: #f5f5f7;
+  border-radius: 14px;
+  display: flex;
+  position: relative;
+  height: 160px;
+  margin-bottom: 2%;
+}
+.header-wrapper {
+  margin-left: 5%;
+  margin-right: 11%;
+  padding-top: 8%;
+}
+.header-wrapper__title {
+  font-family: "Baloo Bhaina 2", cursive;
+  font-size: 36px;
+  margin-top: 10%;
+}
+.header-wrapper__subtitle {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+}
+.header-wrapper__img-boy {
+  position: absolute;
+  margin-left: 11.8%;
+  bottom: 0;
+}
+
+.course {
+  display: flex;
+}
+.course-conteiner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f5f5f7;
+  border-radius: 14px;
+  min-width: 80%;
+  height: 80px;
+}
+.course_espanol {
+  width: 64px;
+  height: 64px;
+  background: #ffffff;
+  border-radius: 12px;
+  margin-left: 3%;
+}
+.course_espanol-icon {
+  padding: 16px;
+}
+.course-text__title {
+  font-family: "Baloo Bhaina 2", cursive;
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 700;
+  color: #000000;
+}
+.course-text__subtitle {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 15px;
+  margin-right: 10px;
+}
+.course-percent {
+  position: relative;
+}
+.course-percent__icon {
+  position: absolute;
+  top: 12px;
+  left: 8px;
+  font-size: 13px;
+  line-height: 15px;
+}
+.course-button {
+  margin-left: 15px;
+  margin-right: 24px;
+}
+.course-button button {
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  background: #000000;
+  font-size: 13px;
+  line-height: 15px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  color: #ffffff;
+  padding: 12px 32px 12px 34px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.course-button button:hover {
+  transition: 1s;
+  transform: scale(1.1);
+}
+
+.course-arrows {
+  display: flex;
+  margin-top: 3%;
+  margin-left: 20px;
+}
+.course-arrows__left {
+  margin-right: 16px;
+}
+
+.all-course {
+  margin-top: 2%;
+}
+.all-course-nav__title {
+  font-family: "Baloo Bhaina 2", cursive;
+  font-weight: 700;
+  font-size: 24px;
+  margin-bottom: 2%;
+}
+.all-course-nav__menu li {
+  margin-right: 29px;
+  display: inline-block;
+  font-size: 16px;
+  font-family: "Baloo Bhaina 2", cursive;
+  font-weight: 700;
+}
+.all-course-nav__menu li .active {
+  color: #000000;
+  font-weight: 700;
+}
+.all-course-nav__menu li .not-active {
+  color: #000000;
+  opacity: 0.3;
+}
+.all-course-nav__menu li a {
+  text-decoration: none;
+  color: #000000;
+}
+.all-course-nav__menu li:active {
+  transform: scale(1.1);
+}
+
+.course-section {
+  margin-top: 3%;
+}
+.course-section .course-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 80px;
+  background: #f5f5f7;
+  border-radius: 14px;
+}
+.course-section .course-main__icon {
+  width: 64px;
+  height: 64px;
+  background: #ffffff;
+  border-radius: 12px;
+  margin-left: 3%;
+}
+.course-section .course-main__icon-type {
+  padding: 16px 20px;
+}
+.course-section .course-main__icon-type2 {
+  padding: 16px;
+}
+.course-section .course-main__text {
+  width: 27%;
+}
+.course-section .course-main__text-title {
+  font-family: "Baloo Bhaina 2", cursive;
+  font-size: 16px;
+  line-height: 26px;
+}
+.course-section .course-main__text-subtitle {
+  font-family: "Roboto", sans-serif;
+  font-size: 13px;
+  line-height: 15px;
+}
+.course-section .course-main__time {
+  display: flex;
+  font-family: "Roboto", sans-serif;
+  font-size: 13px;
+  line-height: 15px;
+}
+.course-section .course-main__time__img {
+  padding-right: 8px;
+}
+.course-section .course-main__fire {
+  display: flex;
+  font-family: "Roboto", sans-serif;
+  font-size: 13px;
+  line-height: 15px;
+}
+.course-section .course-main__fire__img {
+  padding-right: 8px;
+}
+.course-section .course-main__button {
+  margin-left: 15px;
+  margin-right: 24px;
+}
+.course-section .course-main__button button {
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  background: #000000;
+  font-size: 13px;
+  line-height: 15px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  color: #ffffff;
+  padding: 12px 24px 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.course-section .course-main__button button:hover {
+  transition: 1s;
+  transform: scale(1.1);
+}
+
+.aside {
+  width: 46%;
+  margin-right: 1%;
+}
+
+.navigation {
+  display: flex;
+  margin-top: 6%;
+}
+.navigation .search input {
+  align-items: center;
+  width: 300px;
+  height: 40px;
+  background: #f5f5f7;
+  background-position: 5px;
+  text-indent: 29px;
+  border-radius: 8px;
+  background-image: url(/img/searcj.svg);
+  background-repeat: no-repeat;
+  border: none;
+  outline: none;
+}
+
+.navigation-icon {
+  display: flex;
+  margin-left: 5%;
+}
+.navigation-icon__im {
+  margin-right: 10%;
+}
+.navigation-icon__img {
+  margin-left: 10%;
+}
+
+.stats {
+  margin-top: 5%;
+  display: flex;
+}
+.stats-box {
+  display: flex;
+  align-items: center;
+  width: 200px;
+  height: 96.33px;
+  margin-right: 5%;
+  background: #f5f5f7;
+  border-radius: 14px;
+}
+.stats-box__title {
+  font-family: "Baloo Bhaina 2", cursive;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 102px;
+  padding: 12px 11px 0px 30px;
+}
+.stats-box__subtitle {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+.statis {
+  margin-top: 6%;
+}
+.statis-title {
+  font-family: "Baloo Bhaina 2", cursive;
+  font-size: 24px;
+  line-height: 38px;
+  font-weight: 700;
+}
+.statis-block {
+  margin-top: 2%;
+  display: flex;
+  cursor: pointer;
+  align-items: baseline;
+}
+.statis-block_text {
+  font-family: "Baloo Bhaina 2", cursive;
+  font-size: 16px;
+  font-weight: 700;
+  margin-right: 4%;
+}
+.statis-block_text:active {
+  transform: scale(1.1);
+}
+.statis-block_textwo {
+  font-family: "Baloo Bhaina 2", cursive;
+  font-size: 16px;
+  font-weight: 700;
+  opacity: 0.3;
+}
+.statis-block_textwo:active {
+  transform: scale(1.1);
+}
+.statis-block__select {
+  margin-left: 120px;
+}
+.statis-block__select select {
+  font-family: "Roboto", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  background: #f5f5f7;
+  border-radius: 8px;
+  padding: 10px;
+}
+.statis .graph {
+  margin-top: 6%;
+}
+
+.premium {
+  width: 440px;
+  height: 193px;
+  margin-top: 6%;
+  background: #f5f5f7;
+  border-radius: 14px;
+  display: flex;
+}
+.premium-box {
+  width: 50%;
+  padding-left: 24px;
+  padding-top: 25px;
+}
+.premium-title {
+  padding-top: 24px;
+  font-family: "Baloo Bhaina 2", cursive;
+  font-size: 24px;
+  font-weight: 700;
+  padding-bottom: 3px;
+}
+.premium-subtitle {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 24px;
+}
+.premium__button button {
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  background: #000000;
+  font-size: 13px;
+  line-height: 15px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  color: #ffffff;
+  padding: 12px 24px 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.premium__button button:hover {
+  transition: 1s;
+  transform: scale(1.1);
+}
+.premium img {
+  width: 125px;
+  height: 125px;
+  padding: 37px 47px 30px 56px;
 }

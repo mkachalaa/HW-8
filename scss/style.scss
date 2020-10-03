@@ -12,37 +12,467 @@
 * {
   margin: 0;
   padding: 0;
+  border: 0;
 }
-.body {
-  width: 100%;
-  max-width: 1100px;
-  height: 600px;
-  background: #ffffff;
-  margin: 0 auto;
+
+body {
+  min-width: 1100px;
+  min-height: 600px;
+  height: 100vh;
+  width: auto;
+  padding-top: 2.5%;
+  padding-left: 2.5%;
+  box-sizing: border-box;
+  display: flex;
 }
+
 .section-menu {
-  margin: 24px auto 23px 32px;
   background: #000000;
-  max-width: 132px;
+  width: 10%;
   height: 852px;
   border-radius: 24px;
   text-align: center;
+  flex-direction: column;
+  box-shadow: 11px 13px 21px -7px rgba(0, 0, 0, 0.75);
 
   &_logo {
-    padding-top: 15px;
-    padding-bottom: 32px;
+    padding-top: 24px;
+    padding-bottom: 60px;
     @include font-baloo;
     font-size: 64px;
     line-height: 102px;
     color: #ffffff;
+    transition: 1s;
+    &:hover {
+      color: #f45b5b;
+      transform: scale(1);
+    }
   }
   &-icon {
-    margin-bottom: 224px;
     &__box {
-      margin-bottom: 64px;
+      margin-bottom: 55px;
+      transition: 1s;
+      &:hover {
+        transform: scale(1.5);
+      }
+
+      &-exit {
+        padding-top: 180px;
+        padding-bottom: 10px;
+        transition: 2s;
+        &:active {
+          transform: scale(1.5);
+        }
+      }
     }
-    &__exit-end {
-      margin-bottom: 42px;
+  }
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  margin-left: 5%;
+  margin-right: 4.3%;
+  width: 56%;
+  height: 100%;
+}
+
+.header {
+  margin-top: 5%;
+  background: #f5f5f7;
+  border-radius: 14px;
+  display: flex;
+  position: relative;
+  height: 160px;
+  margin-bottom: 2%;
+
+  &-wrapper {
+    margin-left: 5%;
+    margin-right: 11%;
+    padding-top: 8%;
+
+    &__title {
+      @include font-baloo;
+      font-size: 36px;
+      margin-top: 10%;
     }
+    &__subtitle {
+      @include font-roboto;
+      font-size: 16px;
+    }
+    &__img {
+      &-boy {
+        position: absolute;
+        margin-left: 11.8%;
+        bottom: 0;
+      }
+    }
+  }
+}
+
+.course {
+  display: flex;
+  &-conteiner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #f5f5f7;
+    border-radius: 14px;
+    min-width: 80%;
+    height: 80px;
+  }
+
+  &_espanol {
+    width: 64px;
+    height: 64px;
+    background: #ffffff;
+    border-radius: 12px;
+    margin-left: 3%;
+    &-icon {
+      padding: 16px;
+    }
+  }
+
+  &-text {
+    &__title {
+      @include font-baloo;
+      font-size: 16px;
+      line-height: 26px;
+      font-weight: 700;
+      color: #000000;
+    }
+    &__subtitle {
+      @include font-roboto;
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 15px;
+      margin-right: 10px;
+    }
+  }
+  &-percent {
+    position: relative;
+    &__icon {
+      position: absolute;
+      top: 12px;
+      left: 8px;
+      font-size: 13px;
+      line-height: 15px;
+    }
+  }
+  &-button {
+    margin-left: 15px;
+    margin-right: 24px;
+    button {
+      @include font-roboto;
+      font-weight: bold;
+      background: #000000;
+      font-size: 13px;
+      line-height: 15px;
+      margin: 0;
+      padding: 0;
+      border: none;
+      outline: none;
+      color: #ffffff;
+      padding: 12px 32px 12px 34px;
+      border-radius: 8px;
+      cursor: pointer;
+      &:hover {
+        transition: 1s;
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+
+.course-arrows {
+  display: flex;
+  margin-top: 3%;
+  margin-left: 20px;
+  &__left {
+    margin-right: 16px;
+  }
+  &__right {
+  }
+}
+
+.all-course {
+  margin-top: 2%;
+  &-nav {
+    &__title {
+      @include font-baloo;
+      font-weight: 700;
+      font-size: 24px;
+      margin-bottom: 2%;
+    }
+    &__menu {
+      li {
+        margin-right: 29px;
+        display: inline-block;
+        font-size: 16px;
+        @include font-baloo;
+        font-weight: 700;
+
+        .active {
+          color: #000000;
+          font-weight: 700;
+        }
+        .not-active {
+          color: #000000;
+          opacity: 0.3;
+        }
+
+        a {
+          text-decoration: none;
+          color: #000000;
+        }
+
+        &:active {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+}
+
+.course-section {
+  margin-top: 3%;
+  .course-main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 80px;
+    background: #f5f5f7;
+    border-radius: 14px;
+    &__icon {
+      width: 64px;
+      height: 64px;
+      background: #ffffff;
+      border-radius: 12px;
+      margin-left: 3%;
+      &-type {
+        padding: 16px 20px;
+      }
+      &-type2 {
+        padding: 16px;
+      }
+    }
+
+    &__text {
+      width: 27%;
+      &-title {
+        @include font-baloo;
+        font-size: 16px;
+        line-height: 26px;
+      }
+      &-subtitle {
+        @include font-roboto;
+        font-size: 13px;
+        line-height: 15px;
+      }
+    }
+    &__time {
+      display: flex;
+      @include font-roboto;
+      font-size: 13px;
+      line-height: 15px;
+      &__img {
+        padding-right: 8px;
+      }
+    }
+
+    &__fire {
+      display: flex;
+      @include font-roboto;
+      font-size: 13px;
+      line-height: 15px;
+      &__img {
+        padding-right: 8px;
+      }
+    }
+    &__button {
+      margin-left: 15px;
+      margin-right: 24px;
+      button {
+        @include font-roboto;
+        font-weight: bold;
+        background: #000000;
+        font-size: 13px;
+        line-height: 15px;
+        margin: 0;
+        padding: 0;
+        border: none;
+        outline: none;
+        color: #ffffff;
+        padding: 12px 24px 12px 24px;
+        border-radius: 8px;
+        cursor: pointer;
+        &:hover {
+          transition: 1s;
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+}
+
+.aside {
+  width: 46%;
+  margin-right: 1%;
+}
+.navigation {
+  display: flex;
+  margin-top: 6%;
+  .search input {
+    align-items: center;
+    width: 300px;
+    height: 40px;
+    background: #f5f5f7;
+    background-position: 5px;
+    text-indent: 29px;
+    border-radius: 8px;
+    background-image: url(/img/searcj.svg);
+    background-repeat: no-repeat;
+    border: none;
+    outline: none;
+  }
+}
+.navigation-icon {
+  display: flex;
+  margin-left: 5%;
+  &__im {
+    margin-right: 10%;
+  }
+  &__img {
+    margin-left: 10%;
+  }
+}
+
+.stats {
+  margin-top: 5%;
+  display: flex;
+  &-box {
+    display: flex;
+    align-items: center;
+    width: 200px;
+    height: 96.33px;
+    margin-right: 5%;
+    background: #f5f5f7;
+    border-radius: 14px;
+    &__title {
+      @include font-baloo;
+      font-weight: 700;
+      font-size: 64px;
+      line-height: 102px;
+      padding: 12px 11px 0px 30px;
+    }
+    &__subtitle {
+      @include font-roboto;
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 400;
+    }
+  }
+}
+
+.statis {
+  margin-top: 6%;
+  &-title {
+    @include font-baloo;
+    font-size: 24px;
+    line-height: 38px;
+    font-weight: 700;
+  }
+  &-block {
+    margin-top: 2%;
+    display: flex;
+    cursor: pointer;
+    align-items: baseline;
+    &_text {
+      @include font-baloo;
+      font-size: 16px;
+      font-weight: 700;
+      margin-right: 4%;
+      &:active {
+        transform: scale(1.1);
+      }
+    }
+    &_textwo {
+      @include font-baloo;
+      font-size: 16px;
+      font-weight: 700;
+      opacity: 0.3;
+      &:active {
+        transform: scale(1.1);
+      }
+    }
+    &__select {
+      margin-left: 120px;
+
+      select {
+        @include font-roboto;
+        font-size: 13px;
+        font-weight: 700;
+        background: #f5f5f7;
+        border-radius: 8px;
+        padding: 10px;
+      }
+    }
+  }
+  .graph {
+    margin-top: 6%;
+  }
+}
+
+.premium {
+  width: 440px;
+  height: 193px;
+  margin-top: 6%;
+  background: #f5f5f7;
+  border-radius: 14px;
+  display: flex;
+  &-box {
+    width: 50%;
+    padding-left: 24px;
+    padding-top: 25px;
+  }
+  &-title {
+    padding-top: 24px;
+    @include font-baloo;
+    font-size: 24px;
+    font-weight: 700;
+    padding-bottom: 3px;
+  }
+  &-subtitle {
+    @include font-roboto;
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 24px;
+  }
+  &__button {
+    button {
+      @include font-roboto;
+      font-weight: bold;
+      background: #000000;
+      font-size: 13px;
+      line-height: 15px;
+      margin: 0;
+      padding: 0;
+      border: none;
+      outline: none;
+      color: #ffffff;
+      padding: 12px 24px 12px 24px;
+      border-radius: 8px;
+      cursor: pointer;
+      &:hover {
+        transition: 1s;
+        transform: scale(1.1);
+      }
+    }
+  }
+  img {
+    width: 125px;
+    height: 125px;
+    padding: 37px 47px 30px 56px;
   }
 }
